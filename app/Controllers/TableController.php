@@ -1,7 +1,5 @@
 <?php
 
-namespace app\Controllers;
-
 require_once 'app/Models/Table.php';
 
 use app\Models\Table;
