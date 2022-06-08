@@ -27,12 +27,12 @@
 
 		<main>
 			<table>
-				<?php foreach($tables as $table): ?>
+				<?php foreach($tables as $table_element): ?>
 					<tr>
-						<?php if($table['estado'] == 0): ?>
-							<td style="background-color:red"><?= $table['numero']; ?></td>
+						<?php if($table_element['estado'] == 0): ?>
+							<td style="background-color:red"><?= $table_element['numero']; ?></td>
 						<?php else: ?>
-							<td style="background-color:green"><?= $table['numero']; ?></td>
+							<td style="background-color:green"><?= $table_element['numero']; ?></td>
 						<?php endif; ?>
 					</tr>
 				<?php endforeach; ?>
