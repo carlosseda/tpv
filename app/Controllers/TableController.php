@@ -4,7 +4,7 @@ require_once 'app/Models/Table.php';
 
 use app\Models\Table;
 
-class TabletController {
+class TableController {
 
 	protected $table;
 
