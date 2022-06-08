@@ -1,3 +1,3 @@
 <?php 
-    include("views/tables.php");
+    include("views/mesas.php");
 ?>
