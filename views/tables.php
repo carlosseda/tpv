@@ -1,6 +1,8 @@
 <?php 
     require_once 'app/Controllers/TableController.php';
 
+	use app\Controllers\TableController;
+
 	$table = new TableController();
 ?>
 
