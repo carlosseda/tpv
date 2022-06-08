@@ -1,9 +1,12 @@
-<?php 
-    require_once 'app/Controllers/TableController.php';
+<?php
+
+	require_once 'app/Controllers/TableController.php';
 
 	use app\Controllers\TableController;
 
 	$table = new TableController();
+	$tables = $table->index();
+
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +27,13 @@
 
 		<main>
 			<table>
-				<?php foreach($table->index() as $row): ?>
+				<?php foreach($tables as $table): ?>
 					<tr>
-						<td><?= $row['numero']; ?></td>
+						<?php if($table['estado'] == 0): ?>
+							<td style="background-color:red"><?= $table['numero']; ?></td>
+						<?php else: ?>
+							<td style="background-color:green"><?= $table['numero']; ?></td>
+						<?php endif; ?>
 					</tr>
 				<?php endforeach; ?>
 			</table>
