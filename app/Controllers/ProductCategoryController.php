@@ -6,7 +6,7 @@ require_once 'app/Models/ProductCategory.php';
 
 use app\Models\ProductCategory;
 
-class ProductController {
+class ProductCategoryController {
 
 	protected $product;
 
