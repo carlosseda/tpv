@@ -43,7 +43,7 @@
                     </div>
                     <div class="row mb-5">
                         <?php foreach($productos as $producto): ?>
-                            <div class="col-6 col-md-4 gy-4"><a class="btn g-4 w-100 shadow cat-prod rounded-0 p-0" role="button" href="#medidas" data-bs-toggle="modal"><img src="<?= $producto['nombre']; ?>"></a>
+                            <div class="col-6 col-md-4 gy-4"><a class="btn g-4 w-100 shadow cat-prod rounded-0 p-0" role="button" href="#medidas" data-bs-toggle="modal"><img src="<?= $producto['imagen_url']; ?>"></a>
                                 <h5 class="text-center mb-0"><?= $producto['nombre']; ?></h5>
                             </div>
                         <?php endforeach; ?>
