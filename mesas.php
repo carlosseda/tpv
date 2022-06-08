@@ -4,8 +4,8 @@
 
 	use app\Controllers\TableController;
 
-	$table = new TableController();
-	$tables = $table->index();
+	$mesa = new TableController();
+	$mesas = $table->index();
 
 ?>
 
@@ -33,17 +33,17 @@
                 <section>
                     <h2 class="text-center">MESAS</h2>
                     <div class="row mb-5">
-                        <?php foreach($tables as $table_element): ?>
-                            <?php if($table_element['estado'] == 0): ?>
-                                <div class="col-4 gy-4"><a class="btn btn-danger w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php"><?= $table_element['numero']; ?></a></div>
+                        <?php foreach($mesas as $mesa): ?>
+                            <?php if($mesa['estado'] == 0): ?>
+                                <div class="col-4 gy-4"><a class="btn btn-danger w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php"><?= $mesa['numero']; ?></a></div>
                             <?php else: ?>
-                                <div class="col-4 gy-4"><a class="btn btn-success w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php"><?= $table_element['numero']; ?></a></div>
+                                <div class="col-4 gy-4"><a class="btn btn-success w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php"><?= $mesa['numero']; ?></a></div>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 </section>
             </div>
-            
+
             <div class="col-12 col-lg-5 col-xl-4 mt-5">
                 <aside>
                     <h2 class="text-center">TICKET MESA 1</h2>
