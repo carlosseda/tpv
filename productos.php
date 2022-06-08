@@ -24,8 +24,8 @@
                     <div class="row">
                         <div class="col">
                             <ol class="breadcrumb mb-0 mt-3">
-                                <li class="breadcrumb-item"><a href="index.html"><span><i class="icon ion-android-home me-2"></i>INICIO</span></a></li>
-                                <li class="breadcrumb-item"><a href="categorias.html"><span><i class="icon ion-social-buffer-outline me-2"></i>Categoría</span></a></li>
+                                <li class="breadcrumb-item"><a href="index.php"><span><i class="icon ion-android-home me-2"></i>INICIO</span></a></li>
+                                <li class="breadcrumb-item"><a href="categorias.php"><span><i class="icon ion-social-buffer-outline me-2"></i>Categoría</span></a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><span><i class="icon ion-android-apps me-2"></i>Tapas</span></li>
                             </ol>
                         </div>
