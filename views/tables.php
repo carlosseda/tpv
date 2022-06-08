@@ -1,3 +1,9 @@
+<?php 
+    require_once 'app/Controllers/Table.php';
+
+	$table = new Table();
+?>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -16,16 +22,9 @@
 
 		<main>
 			<table>
-				<?php foreach($product->index() as $row): ?>
+				<?php foreach($table->index() as $row): ?>
 					<tr>
-						<td><?= $row['nombre']; ?></td>
-
-						<?php if($row['precio'] > 2): ?>
-							<td style="background-color:red"><?= $row['precio']; ?></td>
-						<?php else: ?>
-							<td style="background-color:green"><?= $row['precio']; ?></td>
-						<?php endif; ?>
-						
+						<td><?= $row['numero']; ?></td>
 					</tr>
 				<?php endforeach; ?>
 			</table>
