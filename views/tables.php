@@ -1,5 +1,5 @@
 <?php 
-    require_once 'app/Controllers/Table.php';
+    require_once 'app/Controllers/TableController.php';
 
 	$table = new Table();
 ?>
