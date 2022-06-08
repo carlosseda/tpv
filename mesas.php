@@ -5,7 +5,7 @@
 	use app\Controllers\TableController;
 
 	$mesa = new TableController();
-	$mesas = $table->index();
+	$mesas = $mesa->index();
 
 ?>
 
