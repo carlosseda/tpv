@@ -1,5 +1,7 @@
 <?php
 
+namespace app\Controllers;
+
 require_once 'app/Models/ProductCategory.php';
 
 use app\Models\ProductCategory;

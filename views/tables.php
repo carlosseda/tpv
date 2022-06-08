@@ -1,7 +1,7 @@
 <?php 
     require_once 'app/Controllers/TableController.php';
 
-	$table = new Table();
+	$table = new TableController();
 ?>
 
 <!DOCTYPE html>

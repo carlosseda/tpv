@@ -1,5 +1,7 @@
 <?php
 
+namespace app\Controllers;
+
 require_once 'app/Models/Product.php';
 
 use app\Models\Product;
