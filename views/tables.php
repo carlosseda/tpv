@@ -29,8 +29,7 @@
 			<table>
 				<?php foreach($tables as $table_element): ?>
 					<tr>
-						<?php if($table_element['estado'] > 0): ?>
-							<p>hola</p>
+						<?php if($table_element['estado'] == 0): ?>
 							<td style="background-color:red"><?= $table_element['numero']; ?></td>
 						<?php else: ?>
 							<td style="background-color:green"><?= $table_element['numero']; ?></td>
