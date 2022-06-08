@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <?php
 
-	require_once 'app/Controllers/ProductCategoryController.php';
+	require_once 'app/Controllers/ProductController.php';
 
 	use app\Controllers\ProductController;
 
 	$producto = new ProductController();
 	$productos = $producto->index();
-
 ?>
 
 
