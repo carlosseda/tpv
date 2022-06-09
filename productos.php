@@ -10,7 +10,6 @@
 	$productos = $producto->filterCategory($categoria_id);
 ?>
 
-
 <html lang="en">
 
 <head>

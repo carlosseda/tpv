@@ -17,14 +17,16 @@
     <aside>
         <h2 class="text-center">TICKET MESA 1</h2>
         <ul class="list-group shadow mt-4">
-            <?php foreach($productos_ticket as $producto_ticket): ?>
-                <li class="list-group-item d-flex align-items-center"><button class="btn btn-light btn-sm me-2" type="button" data-product="<?= $producto_ticket['id']; ?>"><i class="la la-close"></i></button><img class="img-ticket" src="assets/img/cocacola.png">
-                    <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
-                        <h4 class="nombre-prod mb-0"><?= $producto_ticket['nombre']; ?></h4><span class="medida-prod">20 ml.</span>
-                    </div>
-                    <p class="precio-prod">2.70 €</p>
-                </li>
-            <?php endforeach; ?>
+            <?php if( isset($productos_ticket)): ?>
+                <?php foreach($productos_ticket as $producto_ticket): ?>
+                    <li class="list-group-item d-flex align-items-center"><button class="btn btn-light btn-sm me-2" type="button" data-product="<?= $producto_ticket['id']; ?>"><i class="la la-close"></i></button><img class="img-ticket" src="assets/img/cocacola.png">
+                        <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
+                            <h4 class="nombre-prod mb-0"><?= $producto_ticket['nombre']; ?></h4><span class="medida-prod">20 ml.</span>
+                        </div>
+                        <p class="precio-prod">2.70 €</p>
+                    </li>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </ul>
         <div class="row mt-3">
             <div class="col">
