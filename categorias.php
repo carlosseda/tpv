@@ -4,9 +4,7 @@
 
 	use app\Controllers\ProductCategoryController;
 
-    if($_GET['mesa']){
-        $_SESSION["mesa_id"] = $_GET['mesa'];
-    }
+    $_SESSION["mesa_id"] = $_GET['mesa'];
 
 	$categoria = new ProductCategoryController();
 	$categorias = $categoria->index();
