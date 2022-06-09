@@ -35,7 +35,7 @@ class Ticket extends Connection {
         $stmt = $this->pdo->prepare($query);
         $result = $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
 
