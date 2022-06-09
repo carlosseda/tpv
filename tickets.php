@@ -5,12 +5,8 @@
 	use app\Controllers\TicketController;
 
 	$ticket = new TicketController();
-
-    if(isset($_SESSION["mesa_id"])){
-        $productos_ticket = $ticket->show($_GET['mesa']);
-    } else {
-        $productos_ticket = null;
-    }
+    $productos_ticket = $ticket->show($_GET['mesa']);
+   
 ?>
 
 <div class="col-12 col-lg-5 col-xl-4 mt-5">
