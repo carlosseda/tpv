@@ -55,7 +55,13 @@
                             </h5>
                         </div>
                         <div class="col">
-                            <h5 class="text-center text-white mb-0 border-start pb-1">21%</h5>
+                            <h5 class="text-center text-white mb-0 border-start pb-1">
+                                <?php if(isset($total_ticket['iva']) && $total_ticket['iva'] != null): ?> 
+                                    <?= $total_ticket['iva']; ?> %
+                                <?php else: ?>
+                                    0 %
+                                <?php endif; ?>
+                            </h5>
                         </div>
                         <div class="col">
                             <h5 class="text-center text-white mb-0 bg-dark pb-1">
