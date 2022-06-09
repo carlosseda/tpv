@@ -5,7 +5,12 @@
 	use app\Controllers\TicketController;
 
 	$ticket = new TicketController();
-    $productos_ticket = $ticket->show($_GET['mesa']);
+
+    if(isset($_GET['mesa'])){
+        $productos_ticket = $ticket->show($_GET['mesa']);
+    }else{
+        $productos_ticket = null;
+    }
    
 ?>
 
