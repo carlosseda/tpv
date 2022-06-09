@@ -15,7 +15,7 @@ class Ticket extends Connection {
         INNER JOIN precios ON tickets.precio_id = precios.id 
         INNER JOIN productos ON precios.producto_id = productos.id 
         INNER JOIN productos_categorias ON productos.categoria_id = productos_categorias.id
-        WHERE tickets.activo = 1 AND tickets.venta_id = null AND tickets.mesa_id = '".$mesa_id."'";
+        WHERE tickets.activo = 1 AND tickets.venta_id = null AND tickets.mesa_id = '".$table_id."'";
                 
         $stmt = $this->pdo->prepare($query);
         $result = $stmt->execute();
