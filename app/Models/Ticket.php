@@ -27,7 +27,7 @@ class Ticket extends Connection {
 
     public function total($table_id) {
 
-        $query =  "SELECT ROUND(SUM(precios.precio_base),2) AS base_imponible, ROUND(SUM(precios.precio_base * ivas.multiplicador), 2) AS total
+        $query =  "SELECT SUM(precios.precio_base) AS base_imponible, SUM(precios.precio_base * ivas.multiplicador) AS total, 
         FROM tickets 
         INNER JOIN precios ON tickets.precio_id = precios.id 
         INNER JOIN ivas ON precios.iva_id = ivas.id
