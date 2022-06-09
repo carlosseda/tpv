@@ -15,7 +15,7 @@ class Connection{
     
     public function __construct(){
 
-        $configuration = require_once 'config/database.php';
+        $configuration = require 'config/database.php';
         
         $this->driver = $configuration['driver'];
         $this->host = $configuration['host'];
