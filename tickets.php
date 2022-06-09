@@ -30,7 +30,7 @@
                     </li>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p>No hay productos añadidos al ticket</p>
+                <p class="text-center">No hay productos añadidos al ticket</p>
             <?php endif; ?>
         </ul>
 
