@@ -9,6 +9,7 @@
     if(isset($_GET['mesa'])){
         $productos_ticket = $ticket->show($_GET['mesa']);
         $total_ticket = $ticket->total($_GET['mesa']);
+        var_dump($total_ticket);
     }else{
         $productos_ticket = null;
         $total_ticket = null;
