@@ -11,6 +11,7 @@
         $total_ticket = $ticket->total($_GET['mesa']);
     }else{
         $productos_ticket = null;
+        $total_ticket = null;
     }
    
 ?>
@@ -32,34 +33,38 @@
                 <p>No hay productos añadidos al ticket</p>
             <?php endif; ?>
         </ul>
-        <div class="row mt-3">
-            <div class="col">
-                <div class="bg-secondary">
-                    <div class="row justify-content-between g-0">
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 pt-1">B. Imponible</h5>
+
+        <?php if($total_ticket != null): ?>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="bg-secondary">
+                        <div class="row justify-content-between g-0">
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 pt-1">B. Imponible</h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 border-start pt-1">IVA</h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 bg-dark pt-1">TOTAL</h5>
+                            </div>
                         </div>
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 border-start pt-1">IVA</h5>
-                        </div>
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 bg-dark pt-1">TOTAL</h5>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between g-0">
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 pb-1"><?= $total_ticket['base_imponible']; ?></h5>
-                        </div>
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 border-start pb-1">21%</h5>
-                        </div>
-                        <div class="col">
-                            <h5 class="text-center text-white mb-0 bg-dark pb-1"><?= $total_ticket['total']; ?></h5>
+                        <div class="row justify-content-between g-0">
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 pb-1"><?= $total_ticket['base_imponible']; ?></h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 border-start pb-1">21%</h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-center text-white mb-0 bg-dark pb-1"><?= $total_ticket['total']; ?></h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
+
         <div class="row mt-3 mb-3">
             <div class="col-6">
                 <div><a class="btn btn-danger btn-lg w-100" role="button" href="#myModal" data-bs-toggle="modal">ELIMINAR</a>
