@@ -22,7 +22,7 @@
                         <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
                             <h4 class="nombre-prod mb-0"><?= $producto_ticket['nombre']; ?></h4><span class="medida-prod">20 ml.</span>
                         </div>
-                        <p class="precio-prod"><?= $producto_ticket['precio_base']; ?></p>
+                        <p class="precio-prod"><?= $producto_ticket['precio_base']; ?> €</p>
                     </li>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -48,9 +48,9 @@
                         <div class="col">
                             <h5 class="text-center text-white mb-0 pb-1">
                                 <?php if(isset($total_ticket['base_imponible']) && $total_ticket['base_imponible'] != null): ?>
-                                    <?= $total_ticket['base_imponible']; ?>
+                                    <?= $total_ticket['base_imponible']; ?> €
                                 <?php else: ?>
-                                    0
+                                    0 €
                                 <?php endif; ?>
                             </h5>
                         </div>
@@ -59,10 +59,10 @@
                         </div>
                         <div class="col">
                             <h5 class="text-center text-white mb-0 bg-dark pb-1">
-                                <?php if(isset($total_ticket['total']) && $total_ticket['total'] != null): ?>
-                                    <?= $total_ticket['total']; ?>
+                                <?php if(isset($total_ticket['total']) && $total_ticket['total'] != null): ?> 
+                                    <?= $total_ticket['total']; ?> €
                                 <?php else: ?>
-                                    0
+                                    0 €
                                 <?php endif; ?>
                             </h5>
                         </div>
