@@ -41,7 +41,7 @@
                     </div>
                     <div class="row mb-5">
                         <?php foreach($categorias as $categoria): ?>
-                            <div class="col-6 col-md-4 gy-4"><a class="btn g-4 w-100 shadow cat-prod rounded-0 p-0" role="button" href="productos.php?categoria=<?php echo $categoria['id'] ?>"><img src="<?= $categoria['imagen_url']; ?>"></a>
+                            <div class="col-6 col-md-4 gy-4"><a class="btn g-4 w-100 shadow cat-prod rounded-0 p-0" role="button" href="productos.php?mesa=<?php echo $_GET['mesa'] ?>&categoria=<?php echo $categoria['id'] ?>"><img src="<?= $categoria['imagen_url']; ?>"></a>
                                 <h5 class="text-center mb-0"><?= $categoria['nombre']; ?></h5>
                             </div>
                         <?php endforeach; ?>
