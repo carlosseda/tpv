@@ -36,7 +36,7 @@
                     <h2 class="text-center">MESAS</h2>
                     <div class="row mb-5">
                         <?php foreach($mesas as $mesa): ?>
-                            <?php if( $_SESSION["mesa_id"] == $mesa->id): ?>
+                            <?php if( isset($_SESSION["mesa_id"]) && $_SESSION["mesa_id"] == $mesa['id']): ?>
                                 <div class="col-4 gy-4"><a class="btn btn-information w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php?mesa=<?php echo $mesa['id'] ?>"><?= $mesa['numero']; ?></a></div>
                             <?php elseif($mesa['estado'] == 0): ?>
                                 <div class="col-4 gy-4"><a class="btn btn-danger w-100 p-4 p-sm-5 shadow-sm mesas rounded-0" role="button" href="categorias.php?mesa=<?php echo $mesa['id'] ?>"><?= $mesa['numero']; ?></a></div>
