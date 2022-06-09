@@ -22,7 +22,7 @@
         <ul class="list-group shadow mt-4">
             <?php if($productos_ticket != null): ?>
                 <?php foreach($productos_ticket as $producto_ticket): ?>
-                    <li class="list-group-item d-flex align-items-center"><button class="btn btn-light btn-sm me-2" type="button" data-product="<?= $producto_ticket['id']; ?>"><i class="la la-close"></i></button><img class="img-ticket" src="assets/img/cocacola.png">
+                    <li class="list-group-item d-flex align-items-center"><button class="btn btn-light btn-sm me-2" type="button" data-product="<?= $producto_ticket['id']; ?>"><i class="la la-close"></i></button><img class="img-ticket" src="<?= $producto['imagen_url']; ?>">
                         <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
                             <h4 class="nombre-prod mb-0"><?= $producto_ticket['nombre']; ?></h4><span class="medida-prod">20 ml.</span>
                         </div>
