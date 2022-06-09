@@ -4,17 +4,13 @@
 
 	use app\Controllers\TicketController;
 
-    session_start();
-
 	$ticket = new TicketController();
 
     if(isset($_SESSION["mesa_id"])){
-        $productos_ticket = $ticket->show($_SESSION["mesa_id"]);
+        $productos_ticket = $ticket->show($_GET['mesa']);
     } else {
         $productos_ticket = null;
     }
-
-    session_write_close();
 ?>
 
 <div class="col-12 col-lg-5 col-xl-4 mt-5">
