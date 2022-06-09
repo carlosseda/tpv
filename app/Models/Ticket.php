@@ -27,11 +27,12 @@ class Ticket extends Connection {
 
     public function total($table_id) {
 
-        $query =  "SELECT SUM(precios.precio_base) AS base_imponible, SUM(precios.precio_base * ivas.multiplicador) AS total, 
+        $query =  "SELECT SUM(precios.precio_base) AS base_imponible, SUM(precios.precio_base * ivas.multiplicador) AS total, ivas.tipo
         FROM tickets 
         INNER JOIN precios ON tickets.precio_id = precios.id 
         INNER JOIN ivas ON precios.iva_id = ivas.id
-        WHERE tickets.activo = 1 AND tickets.venta_id IS NULL AND tickets.mesa_id = '".$table_id."'";
+        WHERE tickets.activo = 1 AND tickets.venta_id IS NULL AND tickets.mesa_id = '".$table_id."'
+        GROUP BY ivas.tipo";
 
         $stmt = $this->pdo->prepare($query);
         $result = $stmt->execute();
