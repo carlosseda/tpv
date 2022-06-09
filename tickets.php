@@ -16,7 +16,7 @@
     <aside>
         <h2 class="text-center">TICKET MESA 1</h2>
         <ul class="list-group shadow mt-4">
-            <?php if($productos_ticket != null): ?>
+            <?php if(isset($productos_ticket) && $productos_ticket != null): ?>
                 <?php foreach($productos_ticket as $producto_ticket): ?>
                     <li class="list-group-item d-flex align-items-center"><button class="btn btn-light btn-sm me-2" type="button" data-product="<?= $producto_ticket['id']; ?>"><i class="la la-close"></i></button><img class="img-ticket" src="<?= $producto_ticket['imagen_url']; ?>">
                         <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
