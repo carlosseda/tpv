@@ -1,8 +1,8 @@
 <?php
 
-	require_once 'app/Controllers/TableController.php';
+	require_once 'app/Controllers/TicketController.php';
 
-	use app\Controllers\TableController;
+	use app\Controllers\TicketController;
 
 	$ticket = new TicketController();
 
