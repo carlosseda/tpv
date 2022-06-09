@@ -13,6 +13,8 @@
     } else {
         $productos_ticket = null;
     }
+
+    session_write_close();
 ?>
 
 <div class="col-12 col-lg-5 col-xl-4 mt-5">

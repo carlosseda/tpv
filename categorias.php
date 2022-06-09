@@ -8,6 +8,8 @@
 
     $_SESSION["mesa_id"] = $_GET['mesa'];
 
+    session_write_close();
+
 	$categoria = new ProductCategoryController();
 	$categorias = $categoria->index();
 ?>
