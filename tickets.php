@@ -10,8 +10,6 @@
         $productos_ticket = $ticket->show($_GET['mesa']);
         $total_ticket = $ticket->total($_GET['mesa']);
     }
-
-    var_dump($total_ticket);
 ?>
 
 <div class="col-12 col-lg-5 col-xl-4 mt-5">
