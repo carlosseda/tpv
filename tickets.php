@@ -9,10 +9,7 @@
     if(isset($_GET['mesa'])){
         $productos_ticket = $ticket->show($_GET['mesa']);
         $total_ticket = $ticket->total($_GET['mesa']);
-    }else{
-        $productos_ticket = null;
-        $total_ticket = null;
-    }   
+    }
 
     var_dump($total_ticket);
 ?>
@@ -52,7 +49,7 @@
                     <div class="row justify-content-between g-0">
                         <div class="col">
                             <h5 class="text-center text-white mb-0 pb-1">
-                                <?php if($total_ticket['base_imponible'] != null): ?>
+                                <?php if(isset($total_ticket['base_imponible']) && $total_ticket['base_imponible'] != null): ?>
                                     <?= $total_ticket['base_imponible']; ?>
                                 <?php else: ?>
                                     0
@@ -64,7 +61,7 @@
                         </div>
                         <div class="col">
                             <h5 class="text-center text-white mb-0 bg-dark pb-1">
-                                <?php if($total_ticket['total'] != null): ?>
+                                <?php if(isset($total_ticket['total']) && $total_ticket['total'] != null): ?>
                                     <?= $total_ticket['total']; ?>
                                 <?php else: ?>
                                     0
