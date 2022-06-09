@@ -4,6 +4,8 @@
 
 	use app\Controllers\ProductCategoryController;
 
+    session_start();
+
     $_SESSION["mesa_id"] = $_GET['mesa'];
 
 	$categoria = new ProductCategoryController();

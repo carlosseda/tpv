@@ -4,6 +4,8 @@
 
 	use app\Controllers\TicketController;
 
+    session_start();
+
 	$ticket = new TicketController();
 
     if(isset($_SESSION["mesa_id"])){
