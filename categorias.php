@@ -4,8 +4,6 @@
 
 	use app\Controllers\ProductCategoryController;
 
-    session_start();
-
     if($_GET['mesa']){
         $_SESSION["mesa_id"] = $_GET['mesa'];
     }

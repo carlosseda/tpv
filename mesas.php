@@ -4,8 +4,6 @@
 
 	use app\Controllers\TableController;
 
-    session_start();
-
 	$mesa = new TableController();
 	$mesas = $mesa->index();
 
