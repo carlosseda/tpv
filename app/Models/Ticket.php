@@ -30,7 +30,7 @@ class Ticket extends Connection {
         $query =  "SELECT ROUND(SUM(precios.precio_base),2) AS base_imponible, ROUND(SUM(precios.precio_base * ivas.multiplicador), 2) AS total
         FROM tickets 
         INNER JOIN precios ON tickets.precio_id = precios.id 
-        INNER JOIN iva ON precios.iva_id = iva.id
+        INNER JOIN ivas ON precios.iva_id = ivas.id
         WHERE tickets.activo = 1 AND tickets.venta_id IS NULL AND tickets.mesa_id = '".$table_id."'";
 
         $stmt = $this->pdo->prepare($query);
