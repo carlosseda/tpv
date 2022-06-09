@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="col">
                             <ol class="breadcrumb mb-0 mt-3">
-                                <li class="breadcrumb-item"><a href="mesas.php"><span><i class="icon ion-android-home me-2"></i>INICIO</span></a></li>
+                                <li class="breadcrumb-item"><a href="mesas.php?mesa=<?php echo $_GET['mesa'] ?>"><span><i class="icon ion-android-home me-2"></i>INICIO</span></a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><span><i class="icon ion-social-buffer-outline me-2"></i>Categorías</span></li>
                             </ol>
                         </div>
