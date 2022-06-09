@@ -9,7 +9,7 @@ use core\Connection;
 
 class Ticket extends Connection {
 
-    public function show($mesa_id) {
+    public function show($table_id) {
 
         $query =  "SELECT productos.nombre AS nombre, precios.precio_base AS precio_base, productos.imagen_url AS imagen_url, categorias.nombre AS categoria FROM tickets 
         INNER JOIN precios ON tickets.precio_id = precios.id 
