@@ -11,7 +11,9 @@ class Ticket extends Connection {
 
     public function show($table_id) {
 
-        $query =  "SELECT productos.id AS id, productos.nombre AS nombre, precios.precio_base AS precio_base, productos.imagen_url AS imagen_url, productos_categorias.nombre AS categoria FROM tickets 
+        $query =  "SELECT productos.id AS id, productos.nombre AS nombre, precios.precio_base AS precio_base, productos.imagen_url 
+        AS imagen_url, productos_categorias.nombre AS categoria, SUM(precios.precio_base) AS base_imponible, SUM(precios.precio_base * 1.21) AS total
+        FROM tickets 
         INNER JOIN precios ON tickets.precio_id = precios.id 
         INNER JOIN productos ON precios.producto_id = productos.id 
         INNER JOIN productos_categorias ON productos.categoria_id = productos_categorias.id

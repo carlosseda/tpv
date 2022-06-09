@@ -24,7 +24,7 @@
                         <div class="flex-grow-1"><span class="categoria-prod"><?= $producto_ticket['categoria']; ?></span>
                             <h4 class="nombre-prod mb-0"><?= $producto_ticket['nombre']; ?></h4><span class="medida-prod">20 ml.</span>
                         </div>
-                        <p class="precio-prod">2.70 €</p>
+                        <p class="precio-prod"><?= $producto_ticket['precio_base']; ?></p>
                     </li>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -47,13 +47,13 @@
                     </div>
                     <div class="row justify-content-between g-0">
                         <div class="col">
-                            <h5 class="text-center text-white mb-0 pb-1">74.30 €</h5>
+                            <h5 class="text-center text-white mb-0 pb-1"><?= $producto_ticket['base_imponible']; ?></h5>
                         </div>
                         <div class="col">
                             <h5 class="text-center text-white mb-0 border-start pb-1">21%</h5>
                         </div>
                         <div class="col">
-                            <h5 class="text-center text-white mb-0 bg-dark pb-1">102.45 €</h5>
+                            <h5 class="text-center text-white mb-0 bg-dark pb-1"><?= $producto_ticket['total']; ?></h5>
                         </div>
                     </div>
                 </div>
