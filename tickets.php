@@ -38,7 +38,12 @@
                             <h5 class="text-center text-white mb-0 pt-1">B. Imponible</h5>
                         </div>
                         <div class="col">
-                            <h5 class="text-center text-white mb-0 border-start pt-1">IVA  (<?= $total_ticket['iva'] ?> %)</h5>
+                            <h5 class="text-center text-white mb-0 border-start pt-1"> 
+                                IVA 
+                                <?php if(isset($total_ticket['base_imponible']) && $total_ticket['base_imponible'] != null): ?>
+                                    (<?= $total_ticket['iva'] ?> %)
+                                <?php endif; ?>
+                            </h5>
                         </div>
                         <div class="col">
                             <h5 class="text-center text-white mb-0 bg-dark pt-1">TOTAL</h5>
