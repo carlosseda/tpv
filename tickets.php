@@ -26,6 +26,8 @@
                         <p class="precio-prod">2.70 €</p>
                     </li>
                 <?php endforeach; ?>
+            <?php else: ?>
+                <p>No hay productos añadidos al ticket</p>
             <?php endif; ?>
         </ul>
         <div class="row mt-3">
