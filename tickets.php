@@ -6,8 +6,6 @@
 
 	$ticket = new TicketController();
 
-    var_dump($_SESSION["mesa_id"]);
-
     if(isset($_SESSION["mesa_id"])){
         $productos_ticket = $ticket->show($_SESSION["mesa_id"]);
     } else {
