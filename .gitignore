@@ -1,1 +1,5 @@
 /libs
+/node_modules
+/excel/tickets
+/pdf/tickets
+

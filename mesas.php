@@ -50,8 +50,9 @@
 
         </div>
     </div>
-    
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="dist/main.js"></script>
 </body>
 
 </html>

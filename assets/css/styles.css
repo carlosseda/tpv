@@ -104,3 +104,41 @@ body {
   background-color: #999;
 }
 
+.export-sale-to-excel{
+  width: max-content;
+  margin-left: auto;
+}
+
+.export-sale-to-excel:hover{
+  cursor: pointer;
+}
+
+.export-sale-to-excel svg {
+  width: 2rem;
+}
+
+.export-sale-to-excel:hover svg path{
+  fill: rgb(3, 132, 5);
+}
+
+
+.small-admin {
+  font-size: 1rem;
+  color: #555;
+  display:block;
+  margin-top:.6rem;
+}
+
+.table>thead {
+  background-color: #c9e7ff;
+}
+
+.table tr {
+  vertical-align: middle;
+  text-align: center;
+  width: 30%;
+}
+
+.table td img {
+  width: 10%;
+}

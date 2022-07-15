@@ -15,8 +15,12 @@ class ProductController {
 		$this->product = new Product();
 	}
 
-	public function filterCategory($category_id){
-		return $this->product->filterCategory($category_id);
+	public function index($category_id){
+		return $this->product->index($category_id);
+	}
+
+	public function getCategory($category_id){
+		return $this->product->getCategory($category_id);
 	}
 }
 

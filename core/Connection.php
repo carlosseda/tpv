@@ -27,7 +27,8 @@ class Connection{
 
             $this->pdo = new PDO($this->driver .':host='.$this->host.';dbname='.$this->database, $this->user, $this->password, 
                 array(
-                    PDO::MYSQL_ATTR_LOCAL_INFILE => TRUE
+                    PDO::MYSQL_ATTR_LOCAL_INFILE => TRUE,
+                    PDO::MYSQL_ATTR_INIT_COMMAND => "SET lc_time_names='es_ES'"
                 )
             );
 
